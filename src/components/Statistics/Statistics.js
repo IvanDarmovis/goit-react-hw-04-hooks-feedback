@@ -7,7 +7,7 @@ function cap(string) {
 
 function Statistics(...args) {
   return Object.keys(args[0]).map(key => (
-    <p key={key}>
+    <p key={key} className={s.stats}>
       {cap(key)}: {args[0][key]}
     </p>
   ));
