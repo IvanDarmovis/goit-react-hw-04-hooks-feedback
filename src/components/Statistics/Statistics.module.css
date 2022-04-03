@@ -1,0 +1,8 @@
+.list {
+  padding: 0;
+}
+
+.stats {
+  list-style: none;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,12 @@
+.button {
+  width: 30%;
+  padding: 15px;
+  font-size: 25px;
+  margin: 10px auto;
+  border: none;
+  background-color: #ddd;
+}
+
+.button:not(:last-child) {
+  margin-right: 5%;
+}
