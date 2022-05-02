@@ -6,12 +6,14 @@ function cap(string) {
   return string[0].toUpperCase() + string.slice(1);
 }
 
-function Statistics(...args) {
+// function Statistics(...args) {
+function Statistics({ good, neutral, bad, total, positivePercentage }) {
+  console.log(arguments);
   return (
     <ul className={s.list}>
-      {Object.keys(args[0]).map(key => (
+      {Object.keys(arguments[0]).map(key => (
         <li key={key} className={s.stats}>
-          {cap(key)}: {args[0][key]}
+          {cap(key)}: {arguments[0][key]}
         </li>
       ))}
     </ul>
