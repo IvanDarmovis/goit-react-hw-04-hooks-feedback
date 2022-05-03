@@ -7,16 +7,22 @@ function cap(string) {
 }
 
 // function Statistics(...args) {
-function Statistics({ good, neutral, bad, total, positivePercentage }) {
-  console.log(arguments);
+// function Statistics({ good, neutral, bad, total, positivePercentage }) {
+function Statistics({ total, positivePercentage, ...args }) {
   return (
-    <ul className={s.list}>
-      {Object.keys(arguments[0]).map(key => (
-        <li key={key} className={s.stats}>
-          {cap(key)}: {arguments[0][key]}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul className={s.list}>
+        {Object.keys(args).map(key => (
+          <li key={key} className={s.stats}>
+            {cap(key)}: {args[key]}
+          </li>
+        ))}
+      </ul>
+      <p className={s.countedStats}>Total: {total}</p>
+      <p className={s.countedStats}>
+        Positive Percentage: {positivePercentage}
+      </p>
+    </div>
   );
 }
 
